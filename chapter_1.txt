@@ -24,4 +24,4 @@ CPU指令集并不是以软件的形式烧写在所谓的CPU内存中，而是�
          1GB = 1024MB
          1TB = 1024GB
 速度单位：网络传输使用比特为最小单位1bit/s就是1bps,所以网络速度和实际的储存单位有8倍的差别，1Mbps就要除以8才能等于实际的字节速度
-9.计算机的字符编码 ASCII码有128个不同字符是最早的编码，后来有256位的 extended ASCII码，现在使用的是unicode俗称万国码，实际中使用的是UTF-8的unicode
+9.计算机的字符编码 ASCII码git是最早的编码，后来有256位的 extended ASCII码，现在使用的是unicode俗称万国码，实际中使用的是UTF-8的unicode
