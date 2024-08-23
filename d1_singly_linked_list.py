@@ -39,9 +39,9 @@ class SinglyLinkedList:
                 if current.next is None:
                     raise IndexError("position out of bound")
                 current = current.next
-                new_node = Node(data)
-                new_node.next = current.next
-                current.next = new_node
+            new_node = Node(data)
+            new_node.next = current.next
+            current.next = new_node
 
     def delete_at_position(self, position):
         if self.head is None:
@@ -58,8 +58,7 @@ class SinglyLinkedList:
             if current.next is None:
                 raise IndexError("position out of bounds")
             else:
-                temp = current.next
-                current.next = temp.next
+                current.next = current.next.next
 
     def print_list(self):
         current = self.head

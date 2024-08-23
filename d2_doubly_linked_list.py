@@ -70,6 +70,21 @@ class DoublyLinkedList:
                     current = current.next
             print(current.next)
 
+    def delete_at_position(self, position):
+        if position == 0:
+            current = self.head.next
+            current.prev = None
+        else:
+            current = self.head
+            for _ in range(position - 1):
+                if current.next is None:
+                    raise IndexError('out of bounds')
+                else:
+                    current = current.next
+            del_next = current.next.next
+            current.next = current.next.next
+            del_next.prev = current
+
 
 if __name__ == '__main__':
     dll = DoublyLinkedList()
@@ -78,4 +93,5 @@ if __name__ == '__main__':
     dll.append("baseball", 300)
     dll.append("baseball", 400)
     dll.print_dll()
-    dll.print_node_by_position(3)
+    dll.delete_at_position(2)
+    dll.print_dll()
